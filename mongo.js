@@ -31,10 +31,10 @@ if(newName && newNumber){
     number:newNumber
 })
 
-note.save().then(result => {
+note.save().then(() => {
   console.log(`added ${newName} ${newNumber} to phonebook`)
   mongoose.connection.close()
-}).catch(error=>{
+}).catch(()=>{
     'Error saving note', note
     mongoose.connection.close()
 })
